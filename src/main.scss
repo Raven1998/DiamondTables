@@ -1,7 +1,7 @@
 $primary: #0351C1;
 
 body {
-  background: rgb(60, 57, 65);
+ background: rgb(41, 44, 41);
 }
 
 
@@ -12,9 +12,10 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-background: rgb(53, 99, 71);
 box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
 border-radius: 11px;
+background: rgb(34, 104, 60)
+
 }
 
 
@@ -29,3 +30,85 @@ border-radius: 11px;
   background-repeat: no-repeat;
 }
 
+.logon-zone{
+  float: right;
+  width: 60%;
+  height: 100%;
+}
+
+.comunicate-zone{
+  width: 100%;
+  font-size: 3vh;
+  height: 55%;
+}
+
+.welcome-text{
+  color: white;
+  
+}
+
+.welcome-text-content{
+  display: block;
+  opacity: 0;
+  animation: revealText .5s forwards;
+  
+}
+
+.content-two{
+  animation-delay: .175s;
+  font-size: 3vh;
+}
+
+.inputs-zone{
+  width: 100%;
+  height: 20%;
+}
+
+.user-logon-input{
+  width: 25vh;
+  height: 4vh;
+  border-radius: 5%;
+  outline: none;
+  background-color: rgb(41, 44, 41);
+  border: rgb(41, 44, 41) solid;
+  
+}
+.user-logon-input:focus{
+  border: rgb(255, 255, 255) solid;
+}
+
+.button-zone{
+  width: 100%;
+  height: 10%;
+  text-align: center;
+}
+
+.login-button{
+  display: inline-block;
+  color:white;
+  text-decoration: none;
+  border: 0.5vh solid rgb(41, 44, 41);
+  border-radius: 11px;
+  width:40%;
+  height: 100%;
+  background-color: rgb(34, 104, 60);
+}
+
+.login-button:hover{
+  animation: pulsate 1s ease-in-out;
+}
+
+@keyframes revealText{
+  from{transform: translateY(20px);}
+  to{
+  opacity: 1;
+  transform: none;
+  }
+}
+
+@keyframes pulsate{
+  0%{
+    box-shadow: 0 0 25px white,
+    0 0 50px green;
+  }
+}
