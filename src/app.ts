@@ -30,16 +30,16 @@ export class App {
             login: this.loginInput.value,
             password: this.passwordInput.value
         }
-
+        document.querySelector('.alert-zone').innerHTML="";
+        
         let cachedData  =JSON.parse(sessionStorage.getItem("logon-data"));
         
-        console.log(User);
-        console.log(cachedData);
         if(User.login ==cachedData.login && User.password==cachedData.password){
             window.location.assign('managementPage.html');
         }
         else{
-            document.querySelector('.alert-zone').innerHTML="Incorrect username or password";
+            document.querySelector('.alert-zone').innerHTML="<img src='assets/error.svg' class='error-img'> Incorrect username or password";
+            "Incorrect username or password";
         }
         
         

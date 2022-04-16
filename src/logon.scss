@@ -109,14 +109,17 @@ span{
 }
 
 .alert-zone{
-  background-color: rgba(255, 0, 0, 0.596);
-  border-radius:.25em;
-  box-shadow:0 0 .25em rgba(0,0,0,.25);
-  box-sizing:border-box;
   font-family: inherit;
   font-weight: 600;
-  transition-duration: 0.8s;
-  
+  transition-duration: 0.8s; 
+  color:rgb(241, 15, 15);
+ 
+}
+
+.error-img{
+  max-width: 25px;
+  max-height: 25px;
+  vertical-align: middle;
 }
 @keyframes revealText{
   from{transform: translateY(10%);}
