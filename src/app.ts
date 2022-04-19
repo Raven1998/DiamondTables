@@ -1,3 +1,6 @@
+import './cookieUtils';
+import { getCookie, setCookie } from './cookieUtils';
+
 export class App {
 
    loginInput:HTMLInputElement;
@@ -32,8 +35,10 @@ export class App {
         }
         document.querySelector('.alert-zone').innerHTML="";
         
-        let cachedData  =JSON.parse(sessionStorage.getItem("logon-data"));
+
+        let cachedData  =JSON.parse(getCookie('logon-data'));
         
+        console.log(cachedData);
         if(User.login ==cachedData.login && User.password==cachedData.password){
             window.location.assign('managementPage.html');
         }
@@ -46,7 +51,7 @@ export class App {
     }
    
     checkUserSession():void{
-        if(window.location.pathname =="/managementPage.html" && sessionStorage.getItem('logon-data') ===null ||sessionStorage.getItem('logon-data')==="")
+        if(window.location.pathname =="/managementPage.html" && getCookie('logon-data') ===null ||getCookie('logon-data')==="")
         {
             window.location.assign('index.html');
         }

@@ -1,4 +1,5 @@
 const path = require("path");
+const fs = require('fs');
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
@@ -10,6 +11,15 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".json"]
+  },
+  devServer: {
+    // ...
+    https: {
+        key: fs.readFileSync("cert.key"),
+        cert: fs.readFileSync("cert.crt"),
+        ca: fs.readFileSync("ca.crt"),
+    },
+    // ....
   },
   devtool: "inline-source-map",
   plugins: [

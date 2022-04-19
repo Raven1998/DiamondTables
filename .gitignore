@@ -44,3 +44,10 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#CA Certs
+ca.crt
+ca.key
+cert.crt
+cert.key
+
