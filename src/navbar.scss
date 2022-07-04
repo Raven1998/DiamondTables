@@ -1,15 +1,170 @@
 
 .navigation{
-  background-color:rgba(255, 255, 255, 0.863);
   width: 100%;
-  height: 8vh;
-  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  height: 7vh;
 }
 
 .account{
   float:right;
   width: 15%;
   height: 100%;
-  background-color: black;
+  margin: 0 auto;
+}
+
+.stats{
+  float:left;
+  width: 15%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.dropdown-account{
+  border: 1px solid;
+  width: 70%;
+  border-radius: 5px;
+  display:none;
+  font-weight: 600;
+  font-size: 1.5rem;
+  transform:translate(25.5%,10%) ;
+  margin:0;
+}
+
+.dropdown-stats{
+  border: 1px solid;
+  width: 70%;
+  border-radius: 5px;
+  display:none;
+  font-weight: 600;
+  font-size: 1.5rem;
+  transform:translate(25.5%,10%) ;
+  margin:0;
+}
+
+.account-button{
+  border:  solid rgb(41, 44, 41);
+  position: relative;
+  width: 70%;
+  height: 50%;
+  color:rgb(0, 0, 0);
+  cursor: pointer;
+  background:white;
+  border-radius: 11px;
+  font-weight: 600;
+  font-size: 1rem;
+  left:17.5%;
+  top:10%;
+}
+
+.stats-button{
+  border:  solid rgb(41, 44, 41);
+  position: relative;
+  width: 70%;
+  height: 50%;
+  color:rgb(0, 0, 0);
+  cursor: pointer;
+  background:white;
+  border-radius: 11px;
+  font-weight: 600;
+  font-size: 1rem;
+  left:17.5%;
+  top:10%;
+}
+
+.table-button{
+  border:  solid rgb(41, 44, 41);
+  position: relative;
+  width: 70%;
+  height: 50%;
+  color:rgb(0, 0, 0);
+  cursor: pointer;
+  background:white;
+  border-radius: 11px;
+  font-weight: 600;
+  font-size: 1rem;
+  left:17.5%;
+  top:10%;
+}
+
+.cost-button{
+  border:  solid rgb(41, 44, 41);
+  position: relative;
+  width: 70%;
+  height: 50%;
+  color:rgb(0, 0, 0);
+  cursor: pointer;
+  background:white;
+  border-radius: 11px;
+  font-weight: 600;
+  font-size: 1rem;
+  left:17.5%;
+  top:10%;
+}
+
+
+
+.account-button::before{
+  transition: 0.5s;
+}
+
+.stats-button::before{
+  transition: 0.5s;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.dropdown-account>ul li{
+  list-style: none;
+  margin:0;  
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.dropdown-stats>ul li{
+  list-style: none;
+  margin:0;  
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.dropdown-account>ul li:hover{
+  background-color:rgba(27, 64, 88, 0.884);
+  color:white;
+  transition: 0.3s;
+}
+
+.dropdown-stats>ul li:hover{
+  background-color:rgba(27, 64, 88, 0.884);
+  color:white;
+  transition: 0.3s;
+}
+
+.account.active .dropdown-account{
+  display: block;
+  margin:0;
+}
+
+.stats.active .dropdown-stats{
+  display: block;
+  margin:0;
+}
+
+.account.active .account-button::before{
+  top:17px;
+}
+
+.stats.active .stats-button::before{
+  top:17px;
+}
+
+
+.option-zone{
+  float:left;
+  width: 15%;
+  height: 100%;
   margin: 0 auto;
 }

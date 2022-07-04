@@ -1,0 +1,44 @@
+.weekly{
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width:40%;
+
+}
+
+.weekly.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.weekly-header{
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.weekly-header .title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.weekly-header .close-weekly{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background:none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.weekly-content{
+  padding: 10px 15px;
+}
+
