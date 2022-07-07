@@ -1,0 +1,88 @@
+.note-zone{
+  width: 80%;
+  height: 20%;
+  transform: translate(10%) ;
+  padding-left: 1%;
+  padding-right: 1%;
+  
+  
+}
+
+.notes{
+float:left;
+width: 70%;
+height: 100%;
+overflow: auto;
+}
+
+.add-note{
+float: left;
+height: 100%;
+width: 30%;
+border-radius: 10%;
+}
+
+.note-fieldset{
+  border:none;
+  text-align: center;
+  font-family:monospace;
+  color:white;
+  height: 80%;
+  
+}
+
+.note-fieldset > legend{
+  font-size: 2rem;
+  font-family:monospace;
+  
+}
+
+.note-input{
+  width: 80%;
+  height: 40%;
+  outline: none;
+  font-size: 180%;
+  background-color: rgba(255, 255, 255, 0.747);
+  border: rgb(0, 0, 0) solid;
+  font-family: inherit;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  text-align: center;
+  border-radius: 10%;
+  transition-duration: 0.8s;
+  margin:2%;
+  
+}
+
+.test{
+  border: solid black;
+  border-radius:2%;
+  background-color: rgb(216, 216, 216);
+  height: 25%;
+  padding: 1%;
+  margin:1%;
+  font-family:monospace;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(27, 64, 88); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white; 
+}

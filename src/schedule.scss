@@ -1,0 +1,45 @@
+.schedule-navigation{
+  width: 80%;
+  height: 5%;
+  transform: translate(10%) ;
+  padding-left: 1%;
+  padding-right: 1%;
+}  
+
+.schedule{
+  width: 80%;
+  height: 60%;
+  background-color: aliceblue;
+  opacity: 70%;
+  border-radius: 2%;
+  padding: 1%;
+  margin-top: 1%;
+  transform: translate(10%) ;
+  font-weight: bold;
+  font-family:monospace;
+  font-size: 1.8em;
+}
+
+table{
+  height: 100%;
+  border: solid black 
+}
+
+tr{border: solid black}
+
+td{border: solid black}
+
+.buttons{
+  float:left;
+  font-weight: bold;
+  font-family:monospace;
+  color:white;
+}
+
+.date{
+  font-size: 1.5em;
+}
+
+.right-navi{
+  float:right;
+}

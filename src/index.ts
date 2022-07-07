@@ -7,5 +7,7 @@ import './costManagement.scss';
 import './changePassword.scss';
 import './dailyStats.scss';
 import './weeklyStats.scss';
+import './noteZone.scss';
+import './schedule.scss';
 
 const app = new App();

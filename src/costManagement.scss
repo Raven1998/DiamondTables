@@ -22,11 +22,14 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
+  background-color: rgba(27, 64, 88, 0.884);
+  color:white;
 }
 
 .cost-header .title{
   font-size: 1.5rem;
   font-weight: bold;
+  font-family:monospace;
 }
 
 .cost-header .close-cost{
@@ -40,4 +43,16 @@
 
 .cost-content{
   padding: 10px 15px;
+}
+
+.add-fieldset{
+  border: 0.5vh rgb(27, 64, 88) solid;
+  text-align: center;
+  font-family:monospace;
+  
+}
+
+.add-fieldset > legend{
+  font-size: 2rem;
+  font-family:monospace;
 }

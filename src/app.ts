@@ -3,10 +3,18 @@ import { getCookie, setCookie } from './cookieUtils';
 
 export class App {
 
+    //log
    loginInput:HTMLInputElement;
    passwordInput:HTMLInputElement;
-   
-   
+
+   //notes
+   noteInput:HTMLInputElement;
+
+   //change password
+   oldPassword:HTMLInputElement
+   newPassword:HTMLInputElement
+
+   currentDate:Date
 
    
    constructor() {
@@ -20,6 +28,9 @@ export class App {
          
          window.addEventListener('load',() => this.checkUserSession())
         this.getManagementButtons();
+        this.getDate();
+        this.LiveClock();
+  
     }
   
     
@@ -53,6 +64,9 @@ export class App {
         let closePwd :HTMLButtonElement = document.querySelector('.close-pwd')
         closePwd.onclick = function(){pwdContent.classList.remove('active')}
 
+        let logoutButton:HTMLButtonElement= document.querySelector(".logout");
+        logoutButton.addEventListener('click', ()=> this.performLogoff())
+
         let dailyButton:HTMLButtonElement= document.querySelector(".dailyst");
         let dailyContent = document.querySelector('.daily');
         dailyButton.onclick = function(){dailyContent.classList.add('active')}
@@ -65,10 +79,15 @@ export class App {
         let closeWeekly :HTMLButtonElement = document.querySelector('.close-weekly')
         closeWeekly.onclick = function(){weeklyContent.classList.remove('active')}
 
+        let changePasswordButton= document.querySelector('#change');
+        changePasswordButton.addEventListener('click', () => this.changePassword());
 
-
-
+        this.noteInput = document.querySelector("#notecontent");
+        let addNoteButton = document.querySelector("#createNote");
+        addNoteButton.addEventListener('click', ()=>this.addNote())
     }
+
+
     performLogon():void{
         let User={
             login: this.loginInput.value,
@@ -90,6 +109,10 @@ export class App {
         
         
     }
+
+    performLogoff(){
+        window.location.assign('index.html')
+    }
    
     checkUserSession():void{
         if(window.location.pathname =="/managementPage.html" && getCookie('logon-data') ===null ||getCookie('logon-data')==="")
@@ -100,4 +123,78 @@ export class App {
             
         }
     }
+
+    changePassword(){
+        this.getChangePasswordData();
+        let passwords={
+            old: this.oldPassword.value,
+            new: this.newPassword.value
+        }
+
+        let cachedData  =JSON.parse(getCookie('logon-data'));
+        
+        console.log(cachedData);
+        if(passwords.old ==cachedData.password){
+            let User={
+                login: cachedData.login,
+                password: passwords.new
+            }
+
+            setCookie('logon-data',JSON.stringify(User));
+
+            document.querySelector('.alert-zone').innerHTML="Password has been changed";
+            "Password has been changed";
+        }
+        else{
+            document.querySelector('.alert-zone').innerHTML="<img src='assets/error.svg' class='error-img'> Incorrect password. Try again";
+            "Incorrect password. Try Again!";
+        }
+
+
+    }
+
+    getChangePasswordData():void{
+        this.oldPassword = document.querySelector('#oldpwd');
+        this.newPassword = document.querySelector('#newpwd');
+    }
+
+    getDate():void{
+        this.currentDate = new Date();
+        let month = this.currentDate.getUTCMonth()+1;
+        let day = this.currentDate.getUTCDay().toString();
+        let year = this.currentDate.getUTCFullYear().toString();
+        
+        let date = day + "/" +month+ "/" +year;
+
+        document.querySelector(".date").textContent+=""+date+"";
+    }
+
+        LiveClock():void{
+        this.currentDate=new Date();
+        var s = this.currentDate.getSeconds();
+        var m = this.currentDate.getMinutes();
+        var h = this.currentDate.getHours();
+
+        document.querySelector(".timer").innerHTML= h+":"+m+":"+s;
+        setInterval(this.LiveClock,1000);
+    }
+
+    addNote():void{
+        let noteContent = this.noteInput.value;
+        console.log(noteContent);
+
+        this.renderNote(noteContent);
+    }
+
+    renderNote(noteContent:string):void{
+        let notePane = document.querySelector(".notes");
+
+        let note =document.createElement('div');
+        note.setAttribute('class','test')
+        note.innerHTML=`${noteContent}`
+        notePane.appendChild(note);
+        
+    }
+    
+    
 }

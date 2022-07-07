@@ -151,6 +151,7 @@ ul{
 .stats.active .dropdown-stats{
   display: block;
   margin:0;
+  
 }
 
 .account.active .account-button::before{
@@ -167,4 +168,13 @@ ul{
   width: 15%;
   height: 100%;
   margin: 0 auto;
+}
+
+.timer{
+  float:left;
+  height: 100%;
+  margin: 0 auto;
+  color:white;
+  font-size: 1.5em;
+
 }
