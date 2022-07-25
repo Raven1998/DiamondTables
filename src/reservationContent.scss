@@ -1,4 +1,4 @@
-.weekly{
+.reservation{
   position: fixed;
   top:50%;
   left:50%;
@@ -9,15 +9,14 @@
   z-index: 10;
   background-color: white;
   width:40%;
-  height: 40%;
 
 }
 
-.weekly.active{
+.reservation.active{
   transform: translate(-50%, -50%) scale(1);
 }
 
-.weekly-header{
+.reservation-header{
   padding: 10px 15px;
   display: flex;
   justify-content: space-between;
@@ -27,13 +26,13 @@
   color:white;
 }
 
-.weekly-header .title{
+.reservation-header .title{
   font-size: 1.5rem;
   font-weight: bold;
   font-family:monospace;
 }
 
-.weekly-header .close-weekly{
+.reservation-header .close-reservation{
   cursor: pointer;
   border: none;
   outline: none;
@@ -42,8 +41,27 @@
   font-weight: bold;
 }
 
-.weekly-content{
+.reservation-content{
   padding: 10px 15px;
-  height: 70%;
 }
 
+.reservation-button{
+  text-align: center;
+}
+
+.alert-zone-reservation{
+  text-align: center;
+  font-family: inherit;
+  font-weight: 600;
+  transition-duration: 0.8s; 
+  color:rgb(241, 15, 15);
+ 
+}
+
+.alert-zone-reservation-edit{
+  font-family: inherit;
+  font-weight: 600;
+  transition-duration: 0.8s; 
+  color:rgb(241, 15, 15);
+ 
+}

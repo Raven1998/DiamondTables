@@ -9,5 +9,6 @@ import './dailyStats.scss';
 import './weeklyStats.scss';
 import './noteZone.scss';
 import './schedule.scss';
+import './reservationContent.scss';
 
 const app = new App();

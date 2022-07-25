@@ -48,7 +48,7 @@
            </div>
          </div>
          <div class="account">
-          Logged as: 
+          
    
         </div>
 
@@ -67,7 +67,21 @@
 
       </div>
       <div class ='table-content'>
-        Ksiadz Maciej Ziólkowski
+        <fieldset class="add-fieldset">
+          <legend>Add Table:</legend>
+          <input type="text" id="tablename" placeholder="Table Name" class="user-password-input">
+          <input type="text" id="tabledesc" placeholder="Table Description" class="user-password-input">
+          <input list="costslist" id="assignedcost" placeholder="Cost Type" class="user-password-input">
+          <datalist id="costslist">
+            
+          </datalist>
+          <div class="alert-zone-table"></div>
+          <button type="button" id='addtable' class="login-button">Add Table</button>
+        </fieldset>
+
+        <fieldset class="add-fieldset tablefieldset">
+          <legend>Table List:</legend>
+        </fieldset>
       </div>
 
 
@@ -84,10 +98,11 @@
           <legend>Add Cost:</legend>
           <input type="text" id="costname" placeholder="Cost Name" class="user-password-input">
           <input type="number" id="costvalue" placeholder="Prize per hour(zł)" class="user-password-input">
+          <div class="alert-zone-cost"></div>
           <button type="button" id='addcost' class="login-button">Add Cost</button>
         </fieldset>
 
-        <fieldset class="add-fieldset">
+        <fieldset class="add-fieldset costfieldset">
           <legend>Cost List:</legend>
         </fieldset>
         
@@ -119,7 +134,25 @@
 
       </div>
       <div class ='daily-content'>
-        Ksiadz Maciej Ziólkowski
+        <div class="upper-line">
+
+          <div class="statbox">1</div>
+          <div class="statbox">2</div>
+          <div class="statbox">3</div>
+          <div class="statbox">4</div>
+
+
+
+        </div>
+
+
+        <div class="lower-line">
+          <div class="statbox">1</div>
+          <div class="statbox">2</div>
+          <div class="statbox">3</div>
+          <div class="statbox">4</div>
+
+        </div>
       </div>
 
 
@@ -132,13 +165,101 @@
 
       </div>
       <div class ='weekly-content'>
-        Ksiadz Maciej Ziólkowski
+        <div class="upper-line">
+
+          <div class="statbox">1</div>
+          <div class="statbox">2</div>
+          <div class="statbox">3</div>
+          <div class="statbox">4</div>
+
+
+
+        </div>
+
+
+        <div class="lower-line">
+          <div class="statbox">1</div>
+          <div class="statbox">2</div>
+          <div class="statbox">3</div>
+          <div class="statbox">4</div>
+
+        </div>
       </div>
 
 
      </div>
 
      
+     <div class="reservation" id="reservation">
+      <div class ='reservation-header'>
+        <div class="title">Add Reservation</div>
+        <button  class="close-reservation">&times;</button>
+
+      </div>
+      <div class ='reservation-content'>
+        
+        <input type="text" id="bookertname" placeholder="Booker Name" class="user-password-input">
+        <input type="text" id="email" placeholder="E-mail" class="user-password-input">
+        <input type="text" id="phonenumber" placeholder="Phone Number" class="user-password-input">
+        <input list="tablelist" id="assignedtable" placeholder="Table" class="user-password-input">
+          <datalist id="tablelist">
+            
+          </datalist>
+
+          <input list="beginhours" id="starthours" placeholder="Started from" class="user-password-input">
+          <datalist id="beginhours">
+            <option value="10">10:00</option>
+            <option value="11">11:00</option>
+            <option value="12">12:00</option>
+            <option value="13">13:00</option>
+            <option value="14">14:00</option>
+            <option value="15">15:00</option>
+            <option value="16">16:00</option>
+            <option value="17">17:00</option>
+            <option value="18">18:00</option>
+            <option value="19">19:00</option>
+            <option value="20">20:00</option>
+            <option value="21">21:00</option>
+            <option value="22">22:00</option>
+            <option value="23">23:00</option>
+            <option value="24">24:00</option>
+          </datalist>
+
+          <input list="endhours" id="stophours" placeholder="End" class="user-password-input">
+          <datalist id="endhours">
+            <option value="10">10:00</option>
+            <option value="11">11:00</option>
+            <option value="12">12:00</option>
+            <option value="13">13:00</option>
+            <option value="14">14:00</option>
+            <option value="15">15:00</option>
+            <option value="16">16:00</option>
+            <option value="17">17:00</option>
+            <option value="18">18:00</option>
+            <option value="19">19:00</option>
+            <option value="20">20:00</option>
+            <option value="21">21:00</option>
+            <option value="22">22:00</option>
+            <option value="23">23:00</option>
+            <option value="24">24:00</option>
+          </datalist>
+          <div class="alert-zone-reservation"></div>
+          <div class='reservation-button'><button type="button" id='bookReservation' class="login-button">Book Reservation</button></div>
+
+        
+      </div>
+
+
+     </div>
+
+
+
+
+
+
+
+
+
      <div class="note-zone">
 
       <div class="notes">
@@ -163,7 +284,7 @@
       
       </div>
 
-      <div class="right-navi"><button type="button" id='change' class="login-button">Add Reservation</button></div>
+      <div class="right-navi"><button type="button" id='addReserv' class="login-button">Add Reservation</button></div>
       
       
 
@@ -172,57 +293,127 @@
 
 
      <div class="schedule">
-      <table>
-        <tr>
-           <td>10:00</td> <td>2</td> <td>3</td>
-        </tr>
-        <tr>
-           <td>11:00</td> <td>5</td> <td>6</td>
-        </tr>
-        <tr>
-           <td>12:00</td> <td>8</td> <td>9</td>
-        </tr>
-        <tr>
-          <td>13:00</td> <td>8</td> <td>9</td>
-       </tr>
-       <tr>
-        <td>14:00</td> <td>8</td> <td>9</td>
-     </tr>
-     <tr>
-      <td>15:00</td> <td>8</td> <td>9</td>
-   </tr>
-   <tr>
-    <td>16:00</td> <td>8</td> <td>9</td>
- </tr>
- <tr>
-  <td>17:00</td> <td>8</td> <td>9</td>
-</tr>
-<tr>
-  <td>18:00</td> <td>8</td> <td>9</td>
-</tr>
-<tr>
-  <td>19:00</td> <td>8</td> <td>9</td>
-</tr>
-<tr>
-  <td>20:00</td> <td>8</td> <td>9</td>
-</tr>
-<tr>
-  <td>21:00</td> <td>8</td> <td>9</td>
-</tr>
-<tr>
-  <td>22:00</td> <td>8</td> <td>9</td>
-</tr>
-<tr>
-  <td>23:00</td> <td>8</td> <td>9</td>
-</tr>
-<tr>
-  <td>00:00</td> <td>8</td> <td>9</td>
-</tr>
-     </table>
+     <div class="hour-line"> <div class="hourbox"></div><div class="hourbox">10:00</div><div class="hourbox">11:00</div><div class="hourbox">12:00</div><div class="hourbox">13:00</div><div class="hourbox">14:00</div><div class="hourbox">15:00</div><div class="hourbox">16:00</div><div class="hourbox">17:00</div><div class="hourbox">18:00</div><div class="hourbox">19:00</div><div class="hourbox">20:00</div><div class="hourbox">21:00</div><div class="hourbox">22:00</div><div class="hourbox">23:00</div><div class="hourbox">24:00</div>
+    </div>
 
      </div>
+
+
+     <div class="cost-edit" id="cost-edit">
+      <div class ='cost-header'>
+        <div class="title">Change Cost Prize</div>
+        <button  class="close-cost-edit">&times;</button>
+
+      </div>
+      <div class ='cost-content'>
+        <input type="text" id="costname-edit" placeholder="Costname" class="user-password-input">
+        <input type="number" id="costvalue-edit" placeholder="Prize per hour(zł)" class="user-password-input">
+        <div class="alert-zone-cost-edit"></div>
+        <div class="editcostbutton"><button type="button" id='editcost' class="login-button">Apply new cost</button></div>
+        
+      </div>
+     </div>
+
+
+
+     <div class="table-edit" id="table-edit">
+      <div class ='table-header'>
+        <div class="title">Edit Table</div>
+        <button  class="close-table-edit">&times;</button>
+
+      </div>
+      <div class ='table-content'>
+
+        <input type="text" id="tablename-edit" placeholder="Table Name" class="user-password-input">
+        <input type="text" id="tabledesc-edit" placeholder="Description" class="user-password-input">
+        <input list="costslist-edit" id="assignedcost-edit" placeholder="Cost Type" class="user-password-input">
+          <datalist id="costslist-edit">
+            
+          </datalist>
+          <div class="alert-zone-table-edit"></div>
+        <button type="button" id='edittable' class="login-button">Apply</button>
+        
+      </div>
+
+
+     </div>
+
+
      
+     <div class="resDetails" id="resDetails">
+      <div class ='resdetails-header'>
+        <div class="title">Edit Reservation</div>
+        <button  class="close-resDetails">&times;</button>
+
+      </div>
+      <input type="text" id="bookertname-edit" placeholder="Booker Name" class="user-password-input">
+        <input type="text" id="email-edit" placeholder="E-mail" class="user-password-input">
+        <input type="text" id="phonenumber-edit" placeholder="Phone Number" class="user-password-input">
+        <input list="tablelist-edit" id="assignedtable-edit" placeholder="Table" class="user-password-input">
+          <datalist id="tablelist-edit">
+            
+          </datalist>
+
+          <input list="beginhours" id="starthours-edit" placeholder="Started from" class="user-password-input">
+          <datalist id="beginhours">
+            <option value="10">10:00</option>
+            <option value="11">11:00</option>
+            <option value="12">12:00</option>
+            <option value="13">13:00</option>
+            <option value="14">14:00</option>
+            <option value="15">15:00</option>
+            <option value="16">16:00</option>
+            <option value="17">17:00</option>
+            <option value="18">18:00</option>
+            <option value="19">19:00</option>
+            <option value="20">20:00</option>
+            <option value="21">21:00</option>
+            <option value="22">22:00</option>
+            <option value="23">23:00</option>
+            <option value="24">24:00</option>
+          </datalist>
+
+          <input list="endhours" id="stophours-edit" placeholder="End" class="user-password-input">
+          <datalist id="endhours">
+            <option value="10">10:00</option>
+            <option value="11">11:00</option>
+            <option value="12">12:00</option>
+            <option value="13">13:00</option>
+            <option value="14">14:00</option>
+            <option value="15">15:00</option>
+            <option value="16">16:00</option>
+            <option value="17">17:00</option>
+            <option value="18">18:00</option>
+            <option value="19">19:00</option>
+            <option value="20">20:00</option>
+            <option value="21">21:00</option>
+            <option value="22">22:00</option>
+            <option value="23">23:00</option>
+            <option value="24">24:00</option>
+          </datalist>
+          <div class="alert-zone-reservation-edit"></div>
+          <div class='reservation-button'><button type="button" id='editreservation' class="login-button">Apply</button></div>
+        
+      </div>
+
+
+     </div>
     
+
+
+
+     <div class="overview" id="overview">
+      <div class ='overview-header'>
+        <div class="title">Reservation Overwiev</div>
+        <button  class="close-overview">&times;</button>
+
+      </div>
+        <div class="nameofbooker"></div>
+        <div class="resdate"></div>
+        <div class="contact-details">Phone Number:<span class='phonetel'></span> E-Mail:<span class='maila'></span></div>
+        <div class='restimes'><div class="resstart">Reservation start hour:<span class='st'></span></div><div class="resend">Reservation end hour:<span class='nd'></span></div></div>
+        <div class="prize">Reservation Cost:<span class='money'></span></div>
+      </div>
      
      <div id="overlay"></div>
     <script src="index.js"></script>

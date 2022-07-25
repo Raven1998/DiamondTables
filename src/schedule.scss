@@ -15,19 +15,10 @@
   padding: 1%;
   margin-top: 1%;
   transform: translate(10%) ;
-  font-weight: bold;
-  font-family:monospace;
-  font-size: 1.8em;
+  overflow: auto;
+  
 }
 
-table{
-  height: 100%;
-  border: solid black 
-}
-
-tr{border: solid black}
-
-td{border: solid black}
 
 .buttons{
   float:left;
@@ -42,4 +33,226 @@ td{border: solid black}
 
 .right-navi{
   float:right;
+}
+
+// table in schedule
+
+.hour-line{
+  width: 100%;
+  height: 10%;
+  
+}
+
+.hourbox{
+  float:left;
+  height: 100%;
+  width: 5.8%;
+  border: solid black;
+  background-color: rgba(27, 64, 88, 0.884);
+  color:white;
+  font-family: monospace;
+  font-size: 1.7em;
+}
+
+.table-schedule{
+  width: 100%;
+  height: 10%;
+}
+
+
+
+.reservbox{
+  
+  float:left;
+  height: 100%;
+  width: 5.8%;
+  border: solid black;
+  color:white;
+    
+}
+
+
+.booked{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(1, 2, 2, 0.849);
+  font-family: monospace;
+  font-size: 1.3em;
+  overflow: hidden;
+}
+
+.booked-top{
+  width: 100%;
+  height: 50%;;
+  overflow: hidden;
+}
+.booked-bottom{
+  width: 100%;
+  height: 50%;;
+}
+
+
+
+.resDetails{
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width:40%;
+  height: 35%;
+}
+
+.resDetails.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.resdetails-header{
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  background-color: rgba(27, 64, 88, 0.884);
+  color:white;
+  font-family:monospace;
+}
+
+.resdetails-header .title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.resdetails-header .close-resDetails{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background:none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.resDetails-content{
+  padding: 10px 15px;
+  height: 70%;
+}
+
+
+
+
+.overview{
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width:40%;
+  height: 35%;
+}
+
+.overview.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.overview-header{
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  background-color: rgba(27, 64, 88, 0.884);
+  color:white;
+  font-family:monospace;
+}
+
+.overview-header .title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.overview-header .close-overwiew{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background:none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.overview-content{
+  padding: 10px 15px;
+  height: 70%;
+}
+
+//RESDETAILS
+
+.nameofbooker{
+  width: 100%;
+  height:20%;
+  font-size: 5em;
+  font-family: monospace;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.contact-details{
+text-align: center;
+padding-top: 1%;
+width: 100%;
+height: 10%;
+font-family: monospace;
+font-size: 1.7em;
+}
+
+.phonetel{
+  font-family: monospace;
+  font-weight: bold;
+}
+.maila{
+   font-family: monospace; 
+   font-weight: bold;
+  }
+
+  .restimes{
+    text-align: center;
+  }
+.resstart{
+  width: 50%;
+  float:left;
+  background-color: rgb(30, 78, 78);
+  font-size: 1.6em;
+  font-family: monospace;
+}
+
+.resend{
+  width: 50%;
+  float:left;
+  background-color: aquamarine;
+  font-size: 1.6em;
+  font-family: monospace;
+}
+
+.prize{
+  width:100%;
+  height: 20%;
+  font-family: monospace;
+  text-align: center;
+  font-weight: bold;
+  font-size: 4em;
+}
+
+.resdate{
+  width: 100%;
+  text-align: center;
+  color:gray;
+  font-family: monospace;
 }

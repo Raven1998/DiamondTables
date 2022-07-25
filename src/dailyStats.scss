@@ -9,7 +9,7 @@
   z-index: 10;
   background-color: white;
   width:40%;
-
+  height: 40%;
 }
 
 .daily.active{
@@ -43,5 +43,32 @@
 
 .daily-content{
   padding: 10px 15px;
+  height: 70%;
+}
+
+.upper-line{
+  width: 90;
+  
+  height: 45%;
+  padding:2%;
+  
+}
+
+.lower-line{
+  width: 90;
+  
+  height: 45%;
+  padding: 2%;
+}
+
+.statbox{
+  background-color: rgba(27, 64, 88, 0.884);
+  width:24%;
+  height: 100%;
+  display:inline-block;
+  justify-content: center;
+  color:white;
+  font-family: monospace;
+  font-size: 1.5em;
 }
 

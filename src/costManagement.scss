@@ -56,3 +56,59 @@
   font-size: 2rem;
   font-family:monospace;
 }
+
+.singleCost{
+   background-color: rgba(27, 64, 88, 0.884);
+   font-family: monospace;
+   color: white;
+   font-size: 1.5em;
+   margin:1%;
+
+}
+
+.costName{
+  float:left;
+}
+
+.costright{
+  text-align: right;
+}
+
+
+.cost-edit{
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width:40%;
+
+}
+
+.cost-edit.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.alert-zone-cost{
+  font-family: inherit;
+  font-weight: 600;
+  transition-duration: 0.8s; 
+  color:rgb(241, 15, 15);
+ 
+}
+
+.alert-zone-cost-edit{
+  font-family: inherit;
+  font-weight: 600;
+  transition-duration: 0.8s; 
+  color:rgb(241, 15, 15);
+ 
+}
+
+.editcostbutton{
+  text-align: center;
+}
